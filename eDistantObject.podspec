@@ -26,6 +26,9 @@ Pod::Spec.new do |s|
 
   service_private = (Dir.glob("Service/Sources/*.h")) - service_public
   
+  s.pod_target_xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '"${POD_ROOT}/**"', 'HEADER_SEARCH_PATHS' => '"${POD_ROOT}/**"' }
+
+  
   s.subspec 'Service' do |service|
     service.source_files = "Service/Sources/*.{m,h}"
     service.public_header_files = service_public
