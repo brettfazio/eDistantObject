@@ -31,18 +31,21 @@ Pod::Spec.new do |s|
     service.public_header_files = service_public
     service.private_header_files = service_private
     service.header_dir = "$(POD_ROOT)/eDistantObject/Service/Sources"
+    service.header_mappings_dir = "$(POD_ROOT)/eDistantObject/Service/Sources"
   end
 
   s.subspec 'Channel' do |channel|
     channel.source_files = "Channel/Sources/*.{m,h}"
     channel.private_header_files = Dir.glob("Channel/Sources/*.h")
     channel.header_dir = "$(POD_ROOT)/eDistantObject/Channel/Sources"
+    channel.header_mappings_dir = "$(POD_ROOT)/eDistantObject/Channel/Sources"
   end
 
   s.subspec 'Measure' do |measure|
     measure.source_files = "Measure/Sources/*.{m,h}"
     measure.private_header_files = Dir.glob("Measure/Sources/*.h")
     measure.header_dir = "$(POD_ROOT)/eDistantObject/eDistantObject/Measure/Sources"
+    measure.header_mappings_dir = "$(POD_ROOT)/eDistantObject/eDistantObject/Measure/Sources"
   end
 
   device_public = %w[Device/Sources/EDODeviceConnector.h
@@ -54,6 +57,7 @@ Pod::Spec.new do |s|
     device.public_header_files = device_public
     device.private_header_files = device_private
     device.header_dir = "$(POD_ROOT)/eDistantObject/eDistantObject/Device/Sources"
+    device.header_mappings_dir = "$(POD_ROOT)/eDistantObject/eDistantObject/Device/Sources"
   end
 
   s.ios.deployment_target = "10.0"
