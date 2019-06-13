@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author = "Google Inc."
   s.summary = "eDistantObject provides users an easy way to make remote method invocations between processes in Objective-C and Swift without explicitly constructing RPC structures."
   s.license = { :type => "Apache 2.0", :file => "LICENSE" }
-  s.source = { :git => "https://github.com/brettfazio/eDistantObject.git", :tag => "0.9.0" }
+  s.source = { :git => "https://github.com/brettfazio/eDistantObject.git", :branch => "master" }
 
   # Subspec each folder so folders exist when pod is installed.
 
@@ -30,19 +30,19 @@ Pod::Spec.new do |s|
     service.source_files = "Service/Sources/*.{m,h}"
     service.public_header_files = service_public
     service.private_header_files = service_private
-    service.header_dir = "Service/Sources"
+    service.header_dir = "eDistantObject/Service/Sources"
   end
 
   s.subspec 'Channel' do |channel|
     channel.source_files = "Channel/Sources/*.{m,h}"
     channel.private_header_files = Dir.glob("Channel/Sources/*.h")
-    channel.header_dir = "Channel/Sources"
+    channel.header_dir = "eDistantObject/Channel/Sources"
   end
 
   s.subspec 'Measure' do |measure|
     measure.source_files = "Measure/Sources/*.{m,h}"
     measure.private_header_files = Dir.glob("Measure/Sources/*.h")
-    measure.header_dir = "Measure/Sources"
+    measure.header_dir = "eDistantObject/Measure/Sources"
   end
 
   device_public = %w[Device/Sources/EDODeviceConnector.h
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
     device.source_files = "Device/Sources/*.{m,h}"
     device.public_header_files = device_public
     device.private_header_files = device_private
-    device.header_dir = "Device/Sources"
+    device.header_dir = "eDistantObject/Device/Sources"
   end
 
   s.ios.deployment_target = "10.0"
