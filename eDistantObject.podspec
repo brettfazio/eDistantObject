@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "eDistantObject"
-  s.version = "0.9.0"
+  s.version = "40.9.0"
   s.summary = "ObjC and Swift remote invocation framework"
   s.homepage = "https://github.com/google/eDistantObject"
   s.author = "Google LLC."
