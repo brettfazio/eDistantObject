@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
             DESC
   s.license = { :type => "Apache 2.0", :file => "LICENSE" }
 
-  s.source = { :git => "https://github.com/brettfazio/eDistantObject.git", :tag => "0.9.0" }
+  s.source = { :git => "https://github.com/brettfazio/eDistantObject.git", :branch => "test" }
 
 
   s.public_header_files = %w[Service/Sources/EDOClientService.h
