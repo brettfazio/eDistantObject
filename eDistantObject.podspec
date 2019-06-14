@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "eDistantObject"
-  s.version = "0.9.0"
+  s.version = "40.9.0"
   s.summary = "ObjC and Swift remote invocation framework"
   s.homepage = "https://github.com/google/eDistantObject"
   s.author = "Google LLC."
@@ -9,7 +9,11 @@ Pod::Spec.new do |s|
             processes in Objective-C and Swift without explicitly constructing RPC structures.
             DESC
   s.license = { :type => "Apache 2.0", :file => "LICENSE" }
+
   s.source = { :git => "https://github.com/google/eDistantObject.git", :tag => "0.9.0" }
+
+  s.source = { :git => "https://github.com/brettfazio/eDistantObject.git", :tag => "0.9.0" }
+
 
   s.public_header_files = %w[Service/Sources/EDOClientService.h
                              Service/Sources/EDOClientService+Device.h
@@ -31,4 +35,5 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "10.0"
   s.osx.deployment_target = "10.11"
+
 end
