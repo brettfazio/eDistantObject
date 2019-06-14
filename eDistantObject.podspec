@@ -32,6 +32,6 @@ Pod::Spec.new do |s|
                    "Service/Sources/*.{m,h}"
 
   s.ios.deployment_target = "10.0"
-  s.osx.deployment_target = "10.11"
+  s.osx.deployment_target = "10.10"
 
 end
